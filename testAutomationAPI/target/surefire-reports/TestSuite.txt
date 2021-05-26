@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.212 sec <<< FAILURE!
+case3_Name_equal_Gallery_has_a_Description_that_contains_the_text_2x_larger_image on [TestCases passed=0 failed=0 skipped=0](tests.TestCases)  Time elapsed: 0.512 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at tests.TestCases.case3_Name_equal_Gallery_has_a_Description_that_contains_the_text_2x_larger_image(TestCases.java:69)
+
