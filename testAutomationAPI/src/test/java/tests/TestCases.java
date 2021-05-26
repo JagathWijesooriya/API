@@ -58,22 +58,16 @@ public class TestCases  extends TestListenerAdapter {
  }
 
 /*** 
-	 * The Promotions element with Name = "Gallery" has a Description that contains the text "2x larger image"
-	 * this test is for a negative test
-	 */
+ /**
+ * Acceptance criteria3 Name equals Gallery  has a description the text 2 times larger image exists  test- no description contain 2x_larger_image in response body
+ */
 		@Test
 		public void case3_Name_equal_Gallery_has_a_Description_that_contains_the_text_2x_larger_image() {
 			System.out.println("case3...");
 		Response response = given().get("https://api.tmsandbox.co.nz/v1/Categories/6327/Details.json?catalogue=false");
 		int actualstatusCode = response.getStatusCode();
-		
-		int nameLength=response.jsonPath().getString("Name").length();
+		String name=response.jsonPath().getString("Name");
 		String description= response.jsonPath().getString("Description");
-		int descriptionLength=description.length();
-		System.out.println("Description"+response.jsonPath().getString("Description"));
-		// since there was no image in the response urlToImage is null
-		String urlToImage=null;
-		Response responseImage = given().get(urlToImage);
 		assertEquals(actualstatusCode, StatusCodeConstants.Ok);
 		}
 	}
