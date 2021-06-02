@@ -1,26 +1,19 @@
 package tests;
 
-import static org.junit.Assert.*;
-
 import java.io.IOException;
-import java.util.Map;
 import java.util.Properties;
 
-import helpers.JsonProcessing;
 import helpers.RestAssuredHelper;
 import io.restassured.RestAssured;
-import io.restassured.response.Response;
 
 public class BaseTests 
 {   static String defaultUrl="https://api.tmsandbox.co.nz/v1/Categories/6327/Details.json";
 	public static String BaseUrl = defaultUrl;
-	JsonProcessing data;
 	RestAssuredHelper restAssuredHelper;
 	
 	public BaseTests()
 	{
 		setup();
-		data = new JsonProcessing();
 		restAssuredHelper = new RestAssuredHelper();
 	}
 	/**
@@ -47,7 +40,7 @@ public class BaseTests
 		    } catch (IOException ex) {
 		        ex.printStackTrace();
 		    }
-		
+
 	}
 	
 	/**

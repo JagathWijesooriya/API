@@ -12,7 +12,7 @@ import io.restassured.response.Response;
 import tests.BaseTests;
 
 /**
- * listener to monitor the test status
+ * listener to monitor the test status from the inception to fail, skip, success till finish
  * @author Jagath
  *
  */

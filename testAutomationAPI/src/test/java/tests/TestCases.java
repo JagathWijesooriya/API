@@ -2,14 +2,30 @@ package tests;
 
 import static io.restassured.RestAssured.given;
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.testng.TestListenerAdapter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import constants.StatusCodeConstants;
-import io.restassured.response.Response;
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonIOException;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.google.gson.JsonSyntaxException;
+import com.google.gson.reflect.TypeToken;
 
+import constants.StatusCodeConstants;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import models.CategoryInfo;
+import models.Promotion;
 
 @Listeners(listeners.TestNGListeners.class)
 public class TestCases  extends TestListenerAdapter {
@@ -58,17 +74,46 @@ public class TestCases  extends TestListenerAdapter {
  }
 
 /*** 
- /**
- * Acceptance criteria3 Name equals Gallery  has a description the text 2 times larger image exists  test- no description contain 2x_larger_image in response body
- */
-		@Test
+	 * The Promotions element with Name = "Gallery" has a Description that contains the text "2x larger image"
+	 * this test is for a positive test
+	 */
+		//@Test
 		public void case3_Name_equal_Gallery_has_a_Description_that_contains_the_text_2x_larger_image() {
-			System.out.println("case3...");
-		Response response = given().get("https://api.tmsandbox.co.nz/v1/Categories/6327/Details.json?catalogue=false");
-		int actualstatusCode = response.getStatusCode();
-		String name=response.jsonPath().getString("Name");
-		String description= response.jsonPath().getString("Description");
-		assertEquals(actualstatusCode, StatusCodeConstants.Ok);
+
+			Response response = RestAssured.given().when().get(BaseUrl).andReturn();
+			String jsonString=response.getBody().asString();
+
+			try {
+				
+				
+				Type PromotionListType = new TypeToken<ArrayList<Promotion>>(){}.getType();
+				List<CategoryInfo>	promotions = new Gson().fromJson(jsonString,PromotionListType);
+						JsonElement fileElement= JsonParser.parseString(jsonString);
+				
+				JsonObject fileObject = fileElement.getAsJsonObject();
+					//	System.out.println("fileObject=" + fileObject.toString());
+
+						JsonArray jsonArrayOfPromotions = fileObject.get("Promotions").getAsJsonArray();
+						for (JsonElement promotionElement : jsonArrayOfPromotions) {
+							JsonObject promotionObject = promotionElement.getAsJsonObject();
+
+							String name = promotionObject.get("Name").getAsString();
+							String description = promotionObject.get("Description").getAsString();
+							System.out.println("Name=" + name);
+							System.out.println("Description=" + description);
+
+							// if (name.equals("Gallery")&&description.contains("2x larger image")) {}
+							assertTrue(name.equals("Gallery") && description.contains("2x larger image"));
+				}
+			} catch (JsonIOException e) {
+				System.out.println("..IO error...");
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (JsonSyntaxException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}		
+		
 		}
 	}
 	
