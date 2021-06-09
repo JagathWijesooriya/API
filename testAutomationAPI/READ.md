@@ -37,5 +37,6 @@ select the Project testAutomationAPI , right click and select Run As  Maven test
 using command line
 
 go to project directory of testAutomationAPI
-        enter mvn clean install or mvn test/TestNG to run using Maven.
-view the test results on extent report under test-output folder index file using a browser.
+        enter mvn clean install or mvn test to run using Maven.
+        
+view the Test Results on extent report under test-output folder index file using a browser.

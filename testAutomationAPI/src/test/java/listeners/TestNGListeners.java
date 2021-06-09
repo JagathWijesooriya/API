@@ -16,9 +16,8 @@ import tests.BaseTests;
  * @author Jagath
  *
  */
-public class TestNGListeners extends BaseTests implements ITestListener
+public class TestNGListeners implements ITestListener
 {
-	
 
 	public void onFinish(ITestResult result) {
 			System.out.println("\r\n" + "	test finished==..");
