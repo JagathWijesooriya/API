@@ -1,12 +1,10 @@
 models\Promotion.class
-testAutomationAPI\testAutomationAPI\AppTest$1.class
 constants\RequestType.class
-tests\TestCases$1.class
 tests\BaseTests.class
 constants\RestAssuredConstants.class
 listeners\TestNGListeners.class
 tests\TestCases.class
-testAutomationAPI\testAutomationAPI\AppTest.class
+Reports\ExtentManager.class
 helpers\RestAssuredHelper$1.class
 helpers\RestAssuredHelper.class
 models\CategoryInfo.class
