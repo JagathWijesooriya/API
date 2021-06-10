@@ -1,10 +1,10 @@
 models\Promotion.class
 constants\RequestType.class
-tests\TestCases$1.class
 tests\BaseTests.class
 constants\RestAssuredConstants.class
 listeners\TestNGListeners.class
 tests\TestCases.class
+Reports\ExtentManager.class
 helpers\RestAssuredHelper$1.class
 helpers\RestAssuredHelper.class
 models\CategoryInfo.class

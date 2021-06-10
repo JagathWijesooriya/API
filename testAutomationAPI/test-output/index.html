@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Jagath\AppData\Local\Temp\testng-eclipse--1439386004\testng-customsuite.xml</span>
+                    <span>C:\Users\Jagath\AppData\Local\Temp\testng-eclipse-471355537\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -110,6 +110,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tests.TestCases" hash-for-method="case2_CanRelist">case2_CanRelist</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="tests.TestCases" hash-for-method="case3_Name_equal_Gallery_has_a_Description_that_contains_the_text_2x_larger_image">case3_Name_equal_Gallery_has_a_Description_that_contains_the_text_2x_larger_image</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -151,6 +156,13 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="case3_Name_equal_Gallery_has_a_Description_that_contains_the_text_2x_larger_image">
+                  </a> <!-- case3_Name_equal_Gallery_has_a_Description_that_contains_the_text_2x_larger_image -->
+                  <span class="method-name">case3_Name_equal_Gallery_has_a_Description_that_contains_the_text_2x_larger_image</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="case_RecordsgetAll">
                   </a> <!-- case_RecordsgetAll -->
                   <span class="method-name">case_RecordsgetAll</span>
@@ -161,7 +173,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Jagath\AppData\Local\Temp\testng-eclipse--1439386004\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Jagath\AppData\Local\Temp\testng-eclipse-471355537\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -174,6 +186,7 @@
       &lt;class name=&quot;listeners.TestNGListeners&quot;/&gt;
       &lt;class name=&quot;helpers.RestAssuredHelper&quot;/&gt;
       &lt;class name=&quot;constants.StatusCodeConstants&quot;/&gt;
+      &lt;class name=&quot;Reports.ExtentManager&quot;/&gt;
       &lt;class name=&quot;tests.TestCases&quot;/&gt;
       &lt;class name=&quot;runner.TestRunner&quot;/&gt;
       &lt;class name=&quot;models.Promotion&quot;/&gt;
@@ -193,7 +206,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (10 classes)</span>
+                <span class="test-name">Default test (11 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -219,24 +232,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'case1_NameCarbonCredit')
 data.setCell(0, 2, 'tests.TestCases')
-data.setCell(0, 3, 8338);
+data.setCell(0, 3, 2237);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'case_RecordsgetAll')
 data.setCell(1, 2, 'tests.TestCases')
-data.setCell(1, 3, 358);
+data.setCell(1, 3, 540);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'case2_CanRelist')
+data.setCell(2, 1, 'case3_Name_equal_Gallery_has_a_Description_that_contains_the_text_2x_larger_image')
 data.setCell(2, 2, 'tests.TestCases')
-data.setCell(2, 3, 350);
+data.setCell(2, 3, 127);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'case2_CanRelist')
+data.setCell(3, 2, 'tests.TestCases')
+data.setCell(3, 3, 56);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -263,18 +280,154 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">tests.TestCases</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">case1_NameCarbonCredit</span>
+              <div class="configuration-test before">
+                <span class="method-name">setReport</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">case2_CanRelist</span>
-                <span class="method-start">8392 ms</span>
-              </div> <!-- test-method -->
+              </div> <!-- configuration-test before -->
+              <div class="configuration-method before">
+                <span class="method-name">Test2</span>
+                <span class="method-start">690 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">Test3</span>
+                <span class="method-start">742 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">Test4</span>
+                <span class="method-start">742 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initTest1</span>
+                <span class="method-start">743 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">case_RecordsgetAll</span>
-                <span class="method-start">8746 ms</span>
+                <span class="method-start">745 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">finalizeTest1</span>
+                <span class="method-start">1308 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">finalizeTest2</span>
+                <span class="method-start">3166 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">finalizeTest3</span>
+                <span class="method-start">3655 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">finalizeTest4</span>
+                <span class="method-start">4178 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Test2</span>
+                <span class="method-start">4645 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">Test3</span>
+                <span class="method-start">4647 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">Test4</span>
+                <span class="method-start">4648 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initTest1</span>
+                <span class="method-start">4649 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">case1_NameCarbonCredit</span>
+                <span class="method-start">4650 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">finalizeTest1</span>
+                <span class="method-start">6931 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">finalizeTest2</span>
+                <span class="method-start">7348 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">finalizeTest3</span>
+                <span class="method-start">7511 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">finalizeTest4</span>
+                <span class="method-start">7792 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Test2</span>
+                <span class="method-start">7916 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">Test3</span>
+                <span class="method-start">7917 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initTest1</span>
+                <span class="method-start">7918 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">Test4</span>
+                <span class="method-start">7918 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">case2_CanRelist</span>
+                <span class="method-start">7919 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">finalizeTest1</span>
+                <span class="method-start">7979 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">finalizeTest2</span>
+                <span class="method-start">8105 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">finalizeTest3</span>
+                <span class="method-start">8628 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">finalizeTest4</span>
+                <span class="method-start">8914 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">Test2</span>
+                <span class="method-start">9071 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">Test3</span>
+                <span class="method-start">9072 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">Test4</span>
+                <span class="method-start">9073 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">initTest1</span>
+                <span class="method-start">9073 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">case3_Name_equal_Gallery_has_a_Description_that_contains_the_text_2x_larger_image</span>
+                <span class="method-start">9074 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">finalizeTest1</span>
+                <span class="method-start">9204 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">finalizeTest2</span>
+                <span class="method-start">9431 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">finalizeTest3</span>
+                <span class="method-start">9551 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">finalizeTest4</span>
+                <span class="method-start">9701 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

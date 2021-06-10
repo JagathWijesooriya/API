@@ -38,5 +38,3 @@ using command line
 
 go to project directory of testAutomationAPI
         enter mvn clean install or mvn test to run using Maven.
-        
-view the Test Results on extent report under test-output folder index file using a browser.

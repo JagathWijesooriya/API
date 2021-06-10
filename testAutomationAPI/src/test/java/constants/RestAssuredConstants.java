@@ -1,13 +1,14 @@
 package constants;
+
 /**
  * constants used
+ * 
  * @author Jagath
  *
  */
-public class RestAssuredConstants 
-{
-    public static final String ContentType = "Content-Type";
+public class RestAssuredConstants {
+	public static final String ContentType = "Content-Type";
 
-    public static final String ApplicationJson = "application/json";
-    
+	public static final String ApplicationJson = "application/json";
+
 }

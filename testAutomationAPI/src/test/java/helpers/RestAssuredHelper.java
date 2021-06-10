@@ -12,21 +12,19 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class RestAssuredHelper {
-	
+
 	public Response SpecifyAndSendRequest(RequestType requestType, String url, String postModelAsString) {
 
-		RequestSpecification request = RestAssured.given();				
+		RequestSpecification request = RestAssured.given();
 		request.header(RestAssuredConstants.ContentType, RestAssuredConstants.ApplicationJson);
-		
-		if(postModelAsString != null) 
-		{
-			request.body(postModelAsString);					
+
+		if (postModelAsString != null) {
+			request.body(postModelAsString);
 		}
-		
+
 		Response response = null;
 
-		switch(requestType) 
-		{
+		switch (requestType) {
 		case Delete:
 			response = request.delete(url);
 			break;
@@ -43,9 +41,9 @@ public class RestAssuredHelper {
 			response = request.put(url);
 			break;
 		default:
-            throw new UnsupportedOperationException("Request type is not supported.");		
+			throw new UnsupportedOperationException("Request type is not supported.");
 		}
-		
+
 		return response;
 	}
 }

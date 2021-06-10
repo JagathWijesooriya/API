@@ -5,7 +5,16 @@
     <classes>
       <class name="tests.TestCases">
         <methods>
-          <include name="case3_Name_equal_Gallery_has_a_Description_that_contains_the_text_2x_larger_image"/>
+          <include name="Test2"/>
+          <include name="Test4"/>
+          <include name="finalizeTest4"/>
+          <include name="Test3"/>
+          <include name="initTest1"/>
+          <include name="setReport"/>
+          <include name="finalizeTest3"/>
+          <include name="case1_NameCarbonCredit"/>
+          <include name="finalizeTest2"/>
+          <include name="finalizeTest1"/>
         </methods>
       </class> <!-- tests.TestCases -->
     </classes>
