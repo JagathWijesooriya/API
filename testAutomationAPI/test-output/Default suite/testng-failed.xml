@@ -12,8 +12,8 @@
           <include name="initTest1"/>
           <include name="setReport"/>
           <include name="finalizeTest3"/>
-          <include name="case1_NameCarbonCredit"/>
           <include name="finalizeTest2"/>
+          <include name="case3_Name_equal_Gallery_has_a_Description_that_contains_the_text_2x_larger_image"/>
           <include name="finalizeTest1"/>
         </methods>
       </class> <!-- tests.TestCases -->

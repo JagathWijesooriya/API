@@ -192,10 +192,9 @@ public class TestCases extends BaseTests {
 						if (name.equals("Gallery") && description.contains("2x larger image")) {
 							requiredTextContainsInTheDescription = true;
 						}
-						// throw new SkipException("Skipping this test data matching the condition is
-						// nonexisting");
+						 throw new SkipException("Skipping this test data matching the condition is nonexisting");
 					}
-
+System.out.println("...requiredTextContainsInTheDescription="+requiredTextContainsInTheDescription);
 					SoftAssert softAssert = new SoftAssert();
 					AssertJUnit.assertTrue(requiredTextContainsInTheDescription);
 					softAssert.assertAll();
@@ -203,7 +202,7 @@ public class TestCases extends BaseTests {
 					test.log(Status.INFO, "Test inprogress ;");
 				} catch (AssertionError e) {
 					test.log(Status.INFO, "Verify Name Gallery contains text 2X Larger image in the description");
-					test.log(Status.INFO, "Test Exception ;");
+					test.log(Status.INFO, "Test Exception ;"+e.getMessage());
 					test.log(Status.INFO,
 							"Test case fails does not meet  the requirement that  name with Gallery has a Description that contains the text 2x larger image"
 									+ e.getMessage());
