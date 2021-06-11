@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="8012" started-at="2021-06-11T15:32:04 NZST" finished-at="2021-06-11T15:32:12 NZST">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="8012" started-at="2021-06-11T15:32:04 NZST" finished-at="2021-06-11T15:32:12 NZST">
+      <class name="tests.TestCases">
+        <test-method status="PASS" signature="setReport()[pri:0, instance:tests.TestCases@58e6d4b8]" name="setReport" is-config="true" duration-ms="629" started-at="2021-06-11T15:32:04 NZST" finished-at="2021-06-11T15:32:04 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setReport -->
+        <test-method status="PASS" signature="Test2()[pri:0, instance:tests.TestCases@58e6d4b8]" name="Test2" is-config="true" duration-ms="102" started-at="2021-06-11T15:32:04 NZST" finished-at="2021-06-11T15:32:05 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test2 -->
+        <test-method status="PASS" signature="Test3()[pri:0, instance:tests.TestCases@58e6d4b8]" name="Test3" is-config="true" duration-ms="0" started-at="2021-06-11T15:32:05 NZST" finished-at="2021-06-11T15:32:05 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test3 -->
+        <test-method status="PASS" signature="Test4()[pri:0, instance:tests.TestCases@58e6d4b8]" name="Test4" is-config="true" duration-ms="2" started-at="2021-06-11T15:32:05 NZST" finished-at="2021-06-11T15:32:05 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test4 -->
+        <test-method status="PASS" signature="initTest1()[pri:0, instance:tests.TestCases@58e6d4b8]" name="initTest1" is-config="true" duration-ms="10" started-at="2021-06-11T15:32:05 NZST" finished-at="2021-06-11T15:32:05 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTest1 -->
+        <test-method status="PASS" signature="case_RecordsgetAll()[pri:1, instance:tests.TestCases@58e6d4b8]" name="case_RecordsgetAll" duration-ms="467" started-at="2021-06-11T15:32:05 NZST" finished-at="2021-06-11T15:32:05 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- case_RecordsgetAll -->
+        <test-method status="PASS" signature="finalizeTest1()[pri:0, instance:tests.TestCases@58e6d4b8]" name="finalizeTest1" is-config="true" duration-ms="1103" started-at="2021-06-11T15:32:05 NZST" finished-at="2021-06-11T15:32:06 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizeTest1 -->
+        <test-method status="PASS" signature="finalizeTest2()[pri:0, instance:tests.TestCases@58e6d4b8]" name="finalizeTest2" is-config="true" duration-ms="341" started-at="2021-06-11T15:32:06 NZST" finished-at="2021-06-11T15:32:07 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizeTest2 -->
+        <test-method status="PASS" signature="finalizeTest3()[pri:0, instance:tests.TestCases@58e6d4b8]" name="finalizeTest3" is-config="true" duration-ms="215" started-at="2021-06-11T15:32:07 NZST" finished-at="2021-06-11T15:32:07 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizeTest3 -->
+        <test-method status="PASS" signature="finalizeTest4()[pri:0, instance:tests.TestCases@58e6d4b8]" name="finalizeTest4" is-config="true" duration-ms="212" started-at="2021-06-11T15:32:07 NZST" finished-at="2021-06-11T15:32:07 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizeTest4 -->
+        <test-method status="PASS" signature="Test4()[pri:0, instance:tests.TestCases@58e6d4b8]" name="Test4" is-config="true" duration-ms="10" started-at="2021-06-11T15:32:07 NZST" finished-at="2021-06-11T15:32:07 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test4 -->
+        <test-method status="PASS" signature="Test3()[pri:0, instance:tests.TestCases@58e6d4b8]" name="Test3" is-config="true" duration-ms="0" started-at="2021-06-11T15:32:07 NZST" finished-at="2021-06-11T15:32:07 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test3 -->
+        <test-method status="PASS" signature="Test2()[pri:0, instance:tests.TestCases@58e6d4b8]" name="Test2" is-config="true" duration-ms="0" started-at="2021-06-11T15:32:07 NZST" finished-at="2021-06-11T15:32:07 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test2 -->
+        <test-method status="PASS" signature="case1_NameCarbonCredit()[pri:2, instance:tests.TestCases@58e6d4b8]" name="case1_NameCarbonCredit" duration-ms="1462" started-at="2021-06-11T15:32:07 NZST" finished-at="2021-06-11T15:32:08 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- case1_NameCarbonCredit -->
+        <test-method status="PASS" signature="initTest1()[pri:0, instance:tests.TestCases@58e6d4b8]" name="initTest1" is-config="true" duration-ms="0" started-at="2021-06-11T15:32:07 NZST" finished-at="2021-06-11T15:32:07 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTest1 -->
+        <test-method status="PASS" signature="finalizeTest1()[pri:0, instance:tests.TestCases@58e6d4b8]" name="finalizeTest1" is-config="true" duration-ms="212" started-at="2021-06-11T15:32:08 NZST" finished-at="2021-06-11T15:32:09 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizeTest1 -->
+        <test-method status="PASS" signature="finalizeTest2()[pri:0, instance:tests.TestCases@58e6d4b8]" name="finalizeTest2" is-config="true" duration-ms="333" started-at="2021-06-11T15:32:09 NZST" finished-at="2021-06-11T15:32:09 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizeTest2 -->
+        <test-method status="PASS" signature="finalizeTest3()[pri:0, instance:tests.TestCases@58e6d4b8]" name="finalizeTest3" is-config="true" duration-ms="180" started-at="2021-06-11T15:32:09 NZST" finished-at="2021-06-11T15:32:09 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizeTest3 -->
+        <test-method status="PASS" signature="finalizeTest4()[pri:0, instance:tests.TestCases@58e6d4b8]" name="finalizeTest4" is-config="true" duration-ms="129" started-at="2021-06-11T15:32:09 NZST" finished-at="2021-06-11T15:32:09 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizeTest4 -->
+        <test-method status="PASS" signature="Test2()[pri:0, instance:tests.TestCases@58e6d4b8]" name="Test2" is-config="true" duration-ms="1" started-at="2021-06-11T15:32:09 NZST" finished-at="2021-06-11T15:32:09 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test2 -->
+        <test-method status="PASS" signature="Test3()[pri:0, instance:tests.TestCases@58e6d4b8]" name="Test3" is-config="true" duration-ms="0" started-at="2021-06-11T15:32:09 NZST" finished-at="2021-06-11T15:32:09 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test3 -->
+        <test-method status="PASS" signature="Test4()[pri:0, instance:tests.TestCases@58e6d4b8]" name="Test4" is-config="true" duration-ms="0" started-at="2021-06-11T15:32:09 NZST" finished-at="2021-06-11T15:32:09 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test4 -->
+        <test-method status="PASS" signature="initTest1()[pri:0, instance:tests.TestCases@58e6d4b8]" name="initTest1" is-config="true" duration-ms="1" started-at="2021-06-11T15:32:09 NZST" finished-at="2021-06-11T15:32:09 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTest1 -->
+        <test-method status="PASS" signature="case2_CanRelist()[pri:3, instance:tests.TestCases@58e6d4b8]" name="case2_CanRelist" duration-ms="72" started-at="2021-06-11T15:32:09 NZST" finished-at="2021-06-11T15:32:09 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- case2_CanRelist -->
+        <test-method status="PASS" signature="finalizeTest1()[pri:0, instance:tests.TestCases@58e6d4b8]" name="finalizeTest1" is-config="true" duration-ms="170" started-at="2021-06-11T15:32:09 NZST" finished-at="2021-06-11T15:32:10 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizeTest1 -->
+        <test-method status="PASS" signature="finalizeTest2()[pri:0, instance:tests.TestCases@58e6d4b8]" name="finalizeTest2" is-config="true" duration-ms="132" started-at="2021-06-11T15:32:10 NZST" finished-at="2021-06-11T15:32:10 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizeTest2 -->
+        <test-method status="PASS" signature="finalizeTest3()[pri:0, instance:tests.TestCases@58e6d4b8]" name="finalizeTest3" is-config="true" duration-ms="167" started-at="2021-06-11T15:32:10 NZST" finished-at="2021-06-11T15:32:10 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizeTest3 -->
+        <test-method status="PASS" signature="finalizeTest4()[pri:0, instance:tests.TestCases@58e6d4b8]" name="finalizeTest4" is-config="true" duration-ms="383" started-at="2021-06-11T15:32:10 NZST" finished-at="2021-06-11T15:32:10 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizeTest4 -->
+        <test-method status="PASS" signature="Test2()[pri:0, instance:tests.TestCases@58e6d4b8]" name="Test2" is-config="true" duration-ms="1" started-at="2021-06-11T15:32:10 NZST" finished-at="2021-06-11T15:32:10 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test2 -->
+        <test-method status="PASS" signature="Test3()[pri:0, instance:tests.TestCases@58e6d4b8]" name="Test3" is-config="true" duration-ms="1" started-at="2021-06-11T15:32:10 NZST" finished-at="2021-06-11T15:32:10 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test3 -->
+        <test-method status="PASS" signature="Test4()[pri:0, instance:tests.TestCases@58e6d4b8]" name="Test4" is-config="true" duration-ms="2" started-at="2021-06-11T15:32:10 NZST" finished-at="2021-06-11T15:32:10 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test4 -->
+        <test-method status="PASS" signature="initTest1()[pri:0, instance:tests.TestCases@58e6d4b8]" name="initTest1" is-config="true" duration-ms="3" started-at="2021-06-11T15:32:10 NZST" finished-at="2021-06-11T15:32:10 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initTest1 -->
+        <test-method status="PASS" signature="case3_Name_equal_Gallery_has_a_Description_that_contains_the_text_2x_larger_image()[pri:4, instance:tests.TestCases@58e6d4b8]" name="case3_Name_equal_Gallery_has_a_Description_that_contains_the_text_2x_larger_image" duration-ms="152" started-at="2021-06-11T15:32:10 NZST" finished-at="2021-06-11T15:32:10 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- case3_Name_equal_Gallery_has_a_Description_that_contains_the_text_2x_larger_image -->
+        <test-method status="PASS" signature="finalizeTest1()[pri:0, instance:tests.TestCases@58e6d4b8]" name="finalizeTest1" is-config="true" duration-ms="294" started-at="2021-06-11T15:32:10 NZST" finished-at="2021-06-11T15:32:11 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizeTest1 -->
+        <test-method status="PASS" signature="finalizeTest2()[pri:0, instance:tests.TestCases@58e6d4b8]" name="finalizeTest2" is-config="true" duration-ms="456" started-at="2021-06-11T15:32:11 NZST" finished-at="2021-06-11T15:32:11 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizeTest2 -->
+        <test-method status="PASS" signature="finalizeTest3()[pri:0, instance:tests.TestCases@58e6d4b8]" name="finalizeTest3" is-config="true" duration-ms="428" started-at="2021-06-11T15:32:11 NZST" finished-at="2021-06-11T15:32:12 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizeTest3 -->
+        <test-method status="PASS" signature="finalizeTest4()[pri:0, instance:tests.TestCases@58e6d4b8]" name="finalizeTest4" is-config="true" duration-ms="149" started-at="2021-06-11T15:32:12 NZST" finished-at="2021-06-11T15:32:12 NZST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finalizeTest4 -->
+      </class> <!-- tests.TestCases -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

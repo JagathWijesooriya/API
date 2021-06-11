@@ -3,6 +3,7 @@ constants\RequestType.class
 tests\BaseTests.class
 constants\RestAssuredConstants.class
 listeners\TestNGListeners.class
+tests\SkipException.class
 tests\TestCases.class
 Reports\ExtentManager.class
 helpers\RestAssuredHelper$1.class

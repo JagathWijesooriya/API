@@ -2,13 +2,12 @@ package tests;
 
 import static io.restassured.RestAssured.given;
 
-import org.testng.AssertJUnit;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -56,15 +55,15 @@ public class TestCases extends BaseTests {
 		String actualStatusLine = response.getStatusLine();
 
 		try {
-			AssertJUnit.assertEquals(actualstatusCode, StatusCodeConstants.Ok);
-			AssertJUnit.assertEquals(actualStatusLine, "HTTP/1.1 200 OK");
+			Assert.assertEquals(actualstatusCode, StatusCodeConstants.Ok);
+			Assert.assertEquals(actualStatusLine, "HTTP/1.1 200 OK");
 			test.log(Status.INFO, "Starting Test");
 			test.log(Status.INFO, "Read all records Test");
 			test.log(Status.PASS, "Test passed ;");
 		} catch (AssertionError e) {
 			test.log(Status.INFO, " Assert Test Error");
 			test.log(Status.INFO, "Read all records Test");
-			test.log(Status.ERROR, "Test Error ;" + e.getMessage());
+			test.log(Status.FAIL, "Test Error ;" + e.getMessage());
 		}
 	}
 
@@ -79,7 +78,6 @@ public class TestCases extends BaseTests {
 
 		extent = ExtentManager.getReports();
 		test = extent.createTest("Verify case1_Name is CarbonCredit");
-
 	}
 
 	/**
@@ -94,13 +92,14 @@ public class TestCases extends BaseTests {
 		}
 		int actualstatusCode = response.getStatusCode();
 		try {
-			AssertJUnit.assertEquals(actualstatusCode, StatusCodeConstants.Ok);
-			AssertJUnit.assertEquals(response.jsonPath().getString("Name"), "Carbon credits");
+			Assert.assertEquals(actualstatusCode, StatusCodeConstants.Ok);
+			Assert.assertEquals(response.jsonPath().getString("Name"), "Carbon credits");
 			test.log(Status.INFO, "Verify case1_Name is CarbonCredit");
 			test.log(Status.INFO, "Test inprogress ;");
-		} catch (Exception e) {
+			test.log(Status.PASS, "Test Successfull ;" );
+		} catch (AssertionError e) {
 			test.log(Status.INFO, "Verify case1_Name is CarbonCredit");
-			test.log(Status.INFO, "Test Exception ;" + e.getMessage());
+			test.log(Status.FAIL, "Test Exception ;" + e.getMessage());
 		}
 	}
 
@@ -114,15 +113,12 @@ public class TestCases extends BaseTests {
 
 		extent = ExtentManager.getReports();
 		test = extent.createTest("Verify can ReList..");
-
 	}
 
 	public Response reTrygetResponse() {
-		System.out.println("response did not return a value..so reYtring getResponse..." + response);
 		response = given().get(BaseUrl);
 		System.out.println("response value....." + response);
 		return response;
-
 	}
 
 	/**
@@ -132,17 +128,18 @@ public class TestCases extends BaseTests {
 	public void case2_CanRelist() {
 		System.out.println("case2_CanRelist");
 		if (response == null) {
-			System.out.println("response did not return a value....." + response);
 			response = reTrygetResponse();
 		}
 		int actualstatusCode = response.getStatusCode();
 		boolean expectedValue = true;
 		try {
-			AssertJUnit.assertEquals(actualstatusCode, StatusCodeConstants.Ok);
-			AssertJUnit.assertEquals(response.jsonPath().getBoolean("CanRelist"), expectedValue);
-		} catch (Exception e) {
+			Assert.assertEquals(actualstatusCode, StatusCodeConstants.Ok);
+			Assert.assertEquals(response.jsonPath().getBoolean("CanRelist"), expectedValue);
+			test.log(Status.PASS, "Test Successfull ;" );
+		} catch (AssertionError e) {
 			test.log(Status.INFO, "Verify case1_Name is CarbonCredit");
 			test.log(Status.INFO, "Test Exception ;" + e.getMessage());
+			test.log(Status.FAIL, "Test Exception ;" + e.getMessage());
 			String jsonString = response.getBody().asString();
 			System.out.println("Response body =" + jsonString);
 		}
@@ -158,7 +155,6 @@ public class TestCases extends BaseTests {
 
 		extent = ExtentManager.getReports();
 		test = extent.createTest("Verify Name Gallery contains text 2X Larger image in the description..");
-
 	}
 
 	/***
@@ -169,52 +165,42 @@ public class TestCases extends BaseTests {
 	@Test(priority = 4, testName = "Verify Name Gallery contains text 2X Larger image in the description..")
 	public void case3_Name_equal_Gallery_has_a_Description_that_contains_the_text_2x_larger_image() {
 		if (response == null) {
-			System.out.println("response did not return a value....." + response);
 			response = reTrygetResponse();
 		}
 		String jsonString = response.getBody().asString();
-
+		String name = null;
+		String description=null;
+		String assertErrorMessage="Test case fails does not meet  the requirement that  name with Gallery has a Description that contains the text 2x larger image";
+		int actualstatusCode = response.getStatusCode();
 		try {
-
+			Assert.assertEquals(actualstatusCode, StatusCodeConstants.Ok);
 			JsonElement fileElement = JsonParser.parseString(jsonString);
 			JsonObject fileObject = fileElement.getAsJsonObject();
 			JsonArray jsonArrayOfPromotions = fileObject.get("Promotions").getAsJsonArray();
 			for (JsonElement promotionElement : jsonArrayOfPromotions) {
 				JsonObject promotionObject = promotionElement.getAsJsonObject();
-				String name = promotionObject.get("Name").getAsString();
-				String description = promotionObject.get("Description").getAsString();
+				 name = promotionObject.get("Name").getAsString();
+				 description = promotionObject.get("Description").getAsString();
 				System.out.println("Name=" + name);
 				System.out.println("Description=" + description);
-				boolean requiredTextContainsInTheDescription = false;
+				
+				
 				try {
 
-					{
-						if (name.equals("Gallery") && description.contains("2x larger image")) {
-							requiredTextContainsInTheDescription = true;
-						}
-						 throw new SkipException("Skipping this test data matching the condition is nonexisting");
+					if(name.equals("Gallery")) {
+						boolean requiredTextContainsInTheDescription = name.equals("Gallery") && description.contains("2x larger image");
+						
+						System.out.println("boolean CONDITION CHECK+>>>>>>>>>>>>>>>>"+(name.equals("Gallery") && description.contains("2x larger image")));
+						Assert.assertFalse(requiredTextContainsInTheDescription, assertErrorMessage);
 					}
-System.out.println("...requiredTextContainsInTheDescription="+requiredTextContainsInTheDescription);
-					SoftAssert softAssert = new SoftAssert();
-					AssertJUnit.assertTrue(requiredTextContainsInTheDescription);
-					softAssert.assertAll();
-					test.log(Status.INFO, "Verify Name Gallery contains text 2X Larger image in the description");
-					test.log(Status.INFO, "Test inprogress ;");
 				} catch (AssertionError e) {
 					test.log(Status.INFO, "Verify Name Gallery contains text 2X Larger image in the description");
 					test.log(Status.INFO, "Test Exception ;"+e.getMessage());
-					test.log(Status.INFO,
-							"Test case fails does not meet  the requirement that  name with Gallery has a Description that contains the text 2x larger image"
-									+ e.getMessage());
-					System.out.println(
-							"...Test case fails does not meet  the requirement that  name with Gallery has a Description that contains the text 2x larger image");
-				} catch (Throwable t) {
-
-					System.out.println("Throwing error.." + t.getMessage());
-
-				}
+					test.log(Status.INFO,assertErrorMessage);
+					test.log(Status.FAIL, assertErrorMessage);
+					System.out.println(".****..Test case fails does not meet  the requirement that  name with Gallery has a Description that contains the text 2x larger image");
+				} 
 			}
-
 		} catch (JsonIOException e) {
 			System.out.println("..IO error...");
 			// TODO Auto-generated catch block
@@ -223,12 +209,10 @@ System.out.println("...requiredTextContainsInTheDescription="+requiredTextContai
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
 
 	@AfterMethod
 	public void finalizeTest4() {
 		extent.flush();
 	}
-
 }
